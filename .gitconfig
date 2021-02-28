@@ -1,0 +1,24 @@
+[user]
+	email = oliver.rew@rigado.com
+	name = Oliver Rew
+
+[alias]
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    ds = diff --staged
+    lg = log -p
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all --date=local
+[credential]
+	helper = store
+	useHttpPath = true
+[url "git@git.rigado.com:"]
+	insteadOf = https://git.rigado.com/
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
